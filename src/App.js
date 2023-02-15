@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Demo from './components/Demo';
+
 
 function App() {
+
+  const x="gagan";  
+  var text;
+
+  if(x===10){
+    text="Equal";
+  }
+  else{
+    text="not equal";
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+       <h1 className="heading">Hello World</h1>
+       <p style={{backgroundColor:"black", color:"white",fontSize:"35px",textAlign:"center"}}>{50+50}</p>
+       <div className='container'>
+        <label for="name">
+        Enter your name
+        </label> <br/>
+        <input type="text"/>
+
+        <h2>{text}</h2>
+        <h3>
+         { x >= 10 ? "x is greater than or equal to 10":"No match"}
+        </h3>
+
+      <Demo para={x} />
+
+       </div>
     </div>
   );
 }
