@@ -1,5 +1,10 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Demo from './components/Demo';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Services from './pages/Services';
 
 
 function App() {
@@ -16,13 +21,34 @@ function App() {
 
   return (
     <div>
+
+        <BrowserRouter>
+         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+
+
+
+         </Routes>
+       </BrowserRouter>
+
+
+
+
+
+
+
+
+
+
+
+
        <h1 className="heading">Hello World</h1>
        <p style={{backgroundColor:"black", color:"white",fontSize:"35px",textAlign:"center"}}>{50+50}</p>
        <div className='container'>
-        <label for="name">
-        Enter your name
-        </label> <br/>
-        <input type="text"/>
+
 
         <h2>{text}</h2>
         <h3>
